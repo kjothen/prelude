@@ -10,9 +10,9 @@
  '(global-display-line-numbers-mode t)
  '(org-agenda-files '("/Volumes/GoogleDrive/My Drive/org-mode/work.org"))
  '(package-selected-packages
-   '(zprint-mode terraform-mode cider compat dash f gh git-commit ht magit-section markdown-mode posframe transient treemacs with-editor org-journal impatient-mode olivetti org-super-agenda aggressive-indent github-modern-theme zprint-format just-mode justl projectile-ripgrep ripgrep treemacs-perspective treemacs-all-the-icons all-the-icons neotree solarized solarized-theme clojure-mode yaml-mode web-mode lsp-ui lsp-mode json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode git-modes git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window))
+   '(sql-indent restclient pandoc helm-projectile helm dockerfile-mode zprint-mode terraform-mode cider compat dash f gh git-commit ht magit-section markdown-mode posframe transient treemacs with-editor org-journal impatient-mode olivetti org-super-agenda aggressive-indent github-modern-theme zprint-format just-mode justl projectile-ripgrep ripgrep treemacs-perspective treemacs-all-the-icons all-the-icons neotree solarized solarized-theme clojure-mode yaml-mode web-mode lsp-ui lsp-mode json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode git-modes git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window))
  '(safe-local-variable-values
-   '((cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test -Sforce")
+   '((cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test:repl8G:inspect/portal-web")
      (cider-preferred-build-tool . clojure-cli)
      (eval setq clojure-toplevel-inside-comment-form t)))
  '(size-indication-mode t)
@@ -27,8 +27,14 @@
 (load-theme 'solarized-dark t)
 
 '(explicit-shell-file-name "/bin/zsh")
-'(explicit-zsh-args '("--interactive" "--login"))
-'(comint-process-echoes 0)
+'(shell-file-name "zsh")
+'(explicit-zsh-args '("--login" "--interactive"))
+(defun zsh-shell-mode-setup ()
+  (setq-local comint-process-echoes t))
+(add-hook 'shell-mode-hook #'zsh-shell-mode-setup)
+(defun my-comint-init ()
+  (setq comint-process-echoes t))
+(add-hook 'comint-mode-hook #'my-comint-init)
 
 (add-hook 'just-mode-hook (lambda () (set-fill-column 120)))
 (custom-set-faces
