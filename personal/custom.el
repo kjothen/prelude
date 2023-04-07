@@ -13,7 +13,8 @@
  '(package-selected-packages
    '(centaur-tabs treemacs-tab-bar grip-mode multi-term sql-indent restclient pandoc helm-projectile helm dockerfile-mode zprint-mode terraform-mode cider compat dash f gh git-commit ht magit-section markdown-mode posframe transient treemacs with-editor org-journal impatient-mode olivetti org-super-agenda aggressive-indent github-modern-theme zprint-format just-mode justl projectile-ripgrep ripgrep treemacs-perspective treemacs-all-the-icons all-the-icons neotree solarized solarized-theme clojure-mode yaml-mode web-mode lsp-ui lsp-mode json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode git-modes git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window))
  '(safe-local-variable-values
-   '((visual-line-mode . t)
+   '((projectile-project-test-cmd . "just test")
+     (visual-line-mode . t)
      (prelude-whitespace)
      (global-visual-line-mode . t)
      (visual-line-mode \.)
@@ -37,27 +38,33 @@
 '(explicit-shell-file-name "/bin/zsh")
 '(shell-file-name "zsh")
 '(explicit-zsh-args '("--login" "--interactive"))
+
 (defun zsh-shell-mode-setup ()
   (setq-local comint-process-echoes t))
+
 (add-hook 'shell-mode-hook #'zsh-shell-mode-setup)
+
 (defun my-comint-init ()
   (setq comint-process-echoes t))
+
 (add-hook 'comint-mode-hook #'my-comint-init)
 
 (use-package copilot
   :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
   :ensure t)
+
+; complete by copilot first, then auto-complete
 (add-hook 'prog-mode-hook 'copilot-mode)
-                                        ; complete by copilot first, then auto-complete
+
 (defun my-tab ()
   (interactive)
   (or (copilot-accept-completion)
       (ac-expand nil)))
 
 (with-eval-after-load 'auto-complete
-                                        ; disable inline preview
+  ; disable inline preview
   (setq ac-disable-inline t)
-                                        ; show menu if have only one candidate
+  ; show menu if have only one candidate
   (setq ac-candidate-menu-min 0))
 
 (define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
