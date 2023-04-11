@@ -10,5 +10,5 @@
   :custom
   (markdown-xwidget-command "multimarkdown")
   (markdown-xwidget-github-theme "dark")
-  (markdown-xwidget-mermaid-theme "default")
+  (markdown-xwidget-mermaid-theme "dark")
   (markdown-xwidget-code-block-theme "default"))
