@@ -1,5 +1,5 @@
 (use-package lsp-mode
-  :ensure t
+  :straight t
   :hook ((clojure-mode . lsp)
          (clojurec-mode . lsp)
          (clojurescript-mode . lsp))

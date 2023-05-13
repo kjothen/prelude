@@ -1,5 +1,5 @@
 (use-package clj-refactor
-  :ensure t
+  :straight t
   :config
   (add-hook 'clojure-mode-hook
             (lambda ()

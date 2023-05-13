@@ -1,5 +1,5 @@
 (use-package rego-mode
-  :ensure t
+  :straight t
   :custom
   (rego-repl-executable "/usr/local/bin/opa")
   (rego-opa-command "/usr/local/bin/opa"))

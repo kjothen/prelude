@@ -13,3 +13,5 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(straight-use-package 'org)
+(straight-use-package 'solarized-theme)
