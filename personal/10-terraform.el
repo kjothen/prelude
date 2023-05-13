@@ -9,5 +9,5 @@
     )
 
   (add-hook 'terraform-mode-hook 'my-terraform-mode-init)
-  (add-to-list 'auto-mode-alist '"\.spc\\")
+  ;; (add-to-list 'auto-mode-alist '"\.spc\\")
   )
