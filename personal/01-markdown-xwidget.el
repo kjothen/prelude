@@ -1,3 +1,7 @@
+(use-package markdown-mode
+  :straight t
+  :init (setq markdown-command "multimarkdown"))
+
 (use-package markdown-xwidget
   :after markdown-mode
   :straight (markdown-xwidget

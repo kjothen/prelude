@@ -12,5 +12,4 @@
                clojurec-mode
                clojurescript-mode
                clojurex-mode))
-    (add-to-list 'lsp-language-id-configuration `(,m . "clojure")))
-  (setq lsp-clojure-server-command '("/usr/local/bin/clojure-lsp"))) ;; Optional: In case `clojure-lsp` is not in your $PATH
+    (add-to-list 'lsp-language-id-configuration `(,m . "clojure"))))
