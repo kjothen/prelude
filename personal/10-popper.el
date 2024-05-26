@@ -8,8 +8,8 @@
         '("\\*Messages\\*"
           "Output\\*$"
           "\\*Async Shell Command\\*"
-          "\\*cider-error\\*$"
           "\\*Warnings\\*$"
+          "\\*cider.*\\*"
           help-mode
           compilation-mode))
   (popper-mode +1)

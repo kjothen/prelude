@@ -1,10 +1,9 @@
-(use-package clj-refactor
-  :straight t
-  :config
-  (add-hook 'clojure-mode-hook
-            (lambda ()
-              (clj-refactor-mode 1)
-              (cljr-add-keybindings-with-prefix "C-c C-m")
-              ))
-  (setq cljr-warn-on-eval nil)
-  :bind ("C-c '" . hydra-cljr-help-menu/body))
+(require 'clj-refactor)
+
+(defun my-clojure-mode-hook ()
+  (clj-refactor-mode 1)
+  (yas-minor-mode 1) ; for adding require/use/import statements
+  ;; This choice of keybinding leaves cider-macroexpand-1 unbound
+  (cljr-add-keybindings-with-prefix "C-c C-m"))
+
+(add-hook 'clojure-mode-hook #'my-clojure-mode-hook)

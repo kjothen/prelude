@@ -13,5 +13,7 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(straight-use-package 'clj-refactor)
 (straight-use-package 'org)
 (straight-use-package 'solarized-theme)
+(straight-use-package 'yasnippet)
