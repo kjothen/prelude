@@ -73,6 +73,7 @@
 (require 'prelude-emacs-lisp)
 ;; (require 'prelude-erlang)
 ;; (require 'prelude-elixir)
+(require 'prelude-evil)
 ;; (require 'prelude-fsharp)
 (require 'prelude-go)
 ;; (require 'prelude-haskell)

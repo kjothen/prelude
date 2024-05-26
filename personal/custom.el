@@ -9,13 +9,20 @@
    '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
  '(global-display-line-numbers-mode t)
  '(safe-local-variable-values
-   '((visual-line-mode . t)
+   '((cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test:repl8G")
+     (visual-line-mode . t)
      (prelude-whitespace)
      (cider-clojure-cli-aliases . ":lib/pretty-errors:inspect/portal-web:repl/rebel:dev:test")
      (cider-preferred-build-tool . clojure-cli)
      (projectile-project-test-cmd . "just test")))
  '(size-indication-mode t)
- '(tool-bar-mode nil))
+ '(straight-recipes-gnu-elpa-use-mirror t)
+ '(tool-bar-mode nil)
+ '(warning-suppress-log-types
+   '(((copilot copilot-no-mode-indent))
+     ((copilot copilot-no-mode-indent))))
+ '(warning-suppress-types '(((copilot copilot-no-mode-indent)))))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
