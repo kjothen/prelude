@@ -17,11 +17,7 @@
      (projectile-project-test-cmd . "just test")))
  '(size-indication-mode t)
  '(straight-recipes-gnu-elpa-use-mirror t)
- '(tool-bar-mode nil)
- '(warning-suppress-log-types
-   '(((copilot copilot-no-mode-indent))
-     ((copilot copilot-no-mode-indent))))
- '(warning-suppress-types '(((copilot copilot-no-mode-indent)))))
+ '(tool-bar-mode nil))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

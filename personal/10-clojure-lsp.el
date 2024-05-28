@@ -4,10 +4,12 @@
          (clojurec-mode . lsp)
          (clojurescript-mode . lsp))
   :config
+  (setq-local copilot--infer-indentation-offset 2)
   ;; add paths to your local installation of project mgmt tools, like lein
   ;; (setenv "PATH" (concat
   ;;                 "/usr/local/bin" path-separator
   ;;                 (getenv "PATH")))
+
   (dolist (m '(clojure-mode
                clojurec-mode
                clojurescript-mode
