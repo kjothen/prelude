@@ -1,5 +1,7 @@
 (defvar bootstrap-version)
 
+(setq straight-fix-flycheck t)
+
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
       (bootstrap-version 6))
@@ -13,7 +15,9 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
+(straight-use-package 'flycheck)
 (straight-use-package 'clj-refactor)
 (straight-use-package 'org)
 (straight-use-package 'solarized-theme)
 (straight-use-package 'yasnippet)
+(straight-use-package 'envrc)
