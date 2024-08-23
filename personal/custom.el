@@ -9,7 +9,9 @@
    '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
  '(global-display-line-numbers-mode t)
  '(safe-local-variable-values
-   '((cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test:repl8G")
+   '((eval poetry-install-install)
+     (eval envrc-reload)
+     (cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test:repl8G")
      (visual-line-mode . t)
      (prelude-whitespace)
      (cider-clojure-cli-aliases . ":lib/pretty-errors:inspect/portal-web:repl/rebel:dev:test")
