@@ -2,6 +2,9 @@
   :straight t
   :init
   (setq centaur-tabs-enable-key-bindings t)
+  (if (daemonp)
+      (add-hook 'server-after-make-frame-hook 'centaur-tabs-mode)
+      (add-hook 'after-init-hook 'centaur-tabs-mode))
   :config
   (setq centaur-tabs-style "bar"
         centaur-tabs-height 32
@@ -20,7 +23,7 @@
   (centaur-tabs-headline-match)
   ;; (centaur-tabs-enable-buffer-alphabetical-reordering)
   ;; (setq centaur-tabs-adjust-buffer-order t)
-  (centaur-tabs-mode t)
+  (centaur-tabs-mode)
   (setq uniquify-separator "/")
   (setq uniquify-buffer-name-style 'forward)
   (defun centaur-tabs-buffer-groups ()

@@ -1,3 +1,6 @@
+(setq evil-want-keybinding nil)
+(setq prelude-whitespace nil)
+
 (defvar bootstrap-version)
 
 (setq straight-fix-flycheck t)

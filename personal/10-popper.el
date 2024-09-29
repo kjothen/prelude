@@ -5,12 +5,20 @@
          ("C-M-`" . popper-toggle-type))
   :init
   (setq popper-reference-buffers
-        '("\\*Messages\\*"
-          "Output\\*$"
+        '("^\\*Messages\\*"
+          "^\\*Warnings\\*"
+          "\\*Shell Command Output\\*"
           "\\*Async Shell Command\\*"
-          "\\*Warnings\\*$"
-          "\\*cider.*\\*"
+          "\\*Completions\\*"
+          "[Oo]utput\\*$"
+          "^\\*cider.*\\*"
+          "^\\*Python\\*$"
+          "^\\*straight.*\\*"
+          compilation-mode
           help-mode
-          compilation-mode))
+          magit-mode
+          messages-mode
+          occur-mode))
+  (setq popper-group-function #'popper-group-by-project)
   (popper-mode +1)
   (popper-echo-mode +1))

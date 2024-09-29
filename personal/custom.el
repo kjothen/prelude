@@ -9,7 +9,8 @@
    '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
  '(global-display-line-numbers-mode t)
  '(safe-local-variable-values
-   '((eval poetry-install-install)
+   '((projectile-project-test-cmd . "VIRTUAL_ENV=.direnv poetry run pytest")
+     (eval poetry-install-install)
      (eval envrc-reload)
      (cider-clojure-cli-aliases . ":lib/pretty-errors:repl/rebel:dev:test:repl8G")
      (visual-line-mode . t)
