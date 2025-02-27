@@ -5,9 +5,13 @@
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
  '(column-number-mode t)
+ '(copilot-chat-model "claude-3.5-sonnet")
  '(custom-safe-themes
    '("fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+ '(elfeed-feeds
+   '("https://cloud.google.com/feeds/gke-stable-channel-release-notes.xml"))
  '(global-display-line-numbers-mode t)
+ '(python-shell-prompt-detect-failure-warning nil)
  '(safe-local-variable-values
    '((projectile-project-test-cmd . "VIRTUAL_ENV=.direnv poetry run pytest")
      (eval poetry-install-install)

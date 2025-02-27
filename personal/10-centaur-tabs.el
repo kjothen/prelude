@@ -5,6 +5,7 @@
   (if (daemonp)
       (add-hook 'server-after-make-frame-hook 'centaur-tabs-mode)
       (add-hook 'after-init-hook 'centaur-tabs-mode))
+  :demand
   :config
   (setq centaur-tabs-style "bar"
         centaur-tabs-height 32
