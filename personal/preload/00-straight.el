@@ -18,10 +18,4 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
-(straight-use-package 'flycheck)
-(straight-use-package 'clj-refactor)
-(straight-use-package 'org)
 (straight-use-package 'zenburn-theme)
-(straight-use-package 'solarized-theme)
-(straight-use-package 'yasnippet)
-(straight-use-package 'envrc)

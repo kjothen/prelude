@@ -3,8 +3,8 @@
   :bind (("C-`"   . popper-toggle)
          ("M-`"   . popper-cycle)
          ("C-M-`" . popper-toggle-type))
-  :init
-  (setq popper-reference-buffers
+  :custom
+  (popper-reference-buffers
         '("^\\*Messages\\*"
           "^\\*Warnings\\*"
           "\\*Shell Command Output\\*"
@@ -19,6 +19,7 @@
           magit-mode
           messages-mode
           occur-mode))
-  (setq popper-group-function #'popper-group-by-project)
+  (popper-group-function #'popper-group-by-project)
+  :config
   (popper-mode +1)
   (popper-echo-mode +1))
