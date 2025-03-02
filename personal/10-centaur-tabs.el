@@ -1,4 +1,5 @@
 (use-package centaur-tabs
+  :straight t
   :init
   (setq centaur-tabs-enable-key-bindings t)
   :config
@@ -22,7 +23,7 @@
   (centaur-tabs-mode t)
   (setq uniquify-separator "/")
   (setq uniquify-buffer-name-style 'forward)
-  
+
   (defun centaur-tabs-hide-tab (x)
      "Do no to show buffer X in tabs."
      (let ((name (format "%s" x)))
